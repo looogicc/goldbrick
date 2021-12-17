@@ -9,8 +9,8 @@ public class MyKeyListener extends KeyAdapter  {
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-        if(keyEvent.getKeyCode() == GoldbrickMain.nextLine){
-            System.out.print(".");
+        if(keyEvent.getKeyCode() != KeyEvent.VK_ESCAPE){
+            System.out.print(FontColor.GREY.getColor() + ".");
             try {
                 GoldbrickMain.readLineVarFile(); //读取指定行的内容
             } catch (IOException e) {
@@ -18,7 +18,7 @@ public class MyKeyListener extends KeyAdapter  {
             }
             GoldbrickMain.writeLineNo(); // 写入行号
             GoldbrickMain.lineNumber ++;
-        }else if(keyEvent.getKeyCode() == KeyEvent.VK_ESCAPE){
+        }else{
             System.exit(0);
         }
     }

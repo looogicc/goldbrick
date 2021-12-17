@@ -7,13 +7,6 @@ import java.util.List;
 
 /**
  * 启动类 ｜ 控制台看小说
- *
- * 1、可设置小说文字颜色（idea）
- * 2、配置自动阅读和换行速度
- * 3、保存阅读进度 前情回顾
- * 4、时钟组件 手动阅读模式自动打开 鼠标选中时钟窗口触发键盘监听
- * 5、手动模式自定义按键下一行(默认键盘右键)
- *
  * @author luzhuang
  * @date 2021/12/14 1:22 下午
  */
@@ -21,11 +14,10 @@ public class GoldbrickMain {
 
     // 小说配置
     private static final String FILE_NAME = "src/main/resources/txt/斗破苍穹.txt"; // 小说路径
-    private static final FontColor COLOR = FontColor.GREY; // 字体颜色
+    private static final FontColor COLOR = FontColor.CYAN; // 字体颜色
     private static final double NEXT_WAIT = 2.5; // 自动下一行时间 单位:秒
     private static final Boolean AUTO_READ = false; // 是否开启 自动阅读 不开启会打开时钟小组件
     private static final Integer PREVIOUS = 6; // 前情回顾 续看时回看行数(包括空行)
-    static int nextLine = KeyEvent.VK_RIGHT; // 下一行 默认右键
     static int lineNumber = getReadLineNo(); // 获取已读行数
 
     /**

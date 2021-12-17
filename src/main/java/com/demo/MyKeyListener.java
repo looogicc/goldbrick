@@ -18,7 +18,7 @@ public class MyKeyListener extends KeyAdapter  {
             }
             GoldbrickMain.writeLineNo(); // 写入行号
             GoldbrickMain.lineNumber ++;
-        }else {
+        }else if(keyEvent.getKeyCode() == KeyEvent.VK_ESCAPE){
             System.exit(0);
         }
     }

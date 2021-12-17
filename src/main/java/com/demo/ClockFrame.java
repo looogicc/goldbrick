@@ -12,7 +12,7 @@ public class ClockFrame extends Frame implements Runnable{
 
     Thread clock; 
     public ClockFrame(){
-        setTitle("⏰");
+        setTitle("电子时钟");
         setFont(new Font("TimesRoman",Font.BOLD,60)); // 显示调用时钟的字体
         start();
         setSize(310,100);// 设置界面大小

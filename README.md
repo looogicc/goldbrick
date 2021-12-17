@@ -1,5 +1,4 @@
-#Goldbrick - 摸鱼小说工具
-控制台看小说 适用于后端开发日常摸鱼
+# Goldbrick - 控制台看小说 
 
 启动类 com/demo/GoldbrickMain.java
 

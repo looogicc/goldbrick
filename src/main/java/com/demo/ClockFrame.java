@@ -1,8 +1,12 @@
 package com.demo;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,10 +16,10 @@ public class ClockFrame extends Frame implements Runnable{
 
     Thread clock; 
     public ClockFrame(){
-        setTitle("电子时钟");
-        setFont(new Font("TimesRoman",Font.BOLD,60)); // 显示调用时钟的字体
+//        setTitle("Goldbrick");
+        setFont(new Font("TimesRoman",Font.BOLD,80)); // 显示调用时钟的字体
         start();
-        setSize(310,100);// 设置界面大小
+        setSize(400,140);// 设置界面大小
         setVisible(true); // 窗口可视
         addKeyListener(new MyKeyListener());
         addWindowListener(new WindowAdapter() {
@@ -59,9 +63,9 @@ public class ClockFrame extends Frame implements Runnable{
         g.setColor(Color.DARK_GRAY); // 设置颜色
         Dimension dim = getSize(); // 得到窗口大小
         g.fillRect(0, 0, dim.width, dim.height);
-        g.setColor(Color.PINK); // 时钟文字颜色
+        g.setColor(Color.LIGHT_GRAY); // 时钟文字颜色
         g.setXORMode(Color.DARK_GRAY);
-        g.drawString(timeInfo, 20, 80);
+        g.drawString(timeInfo, 20, 110);
     }
 
 }
